@@ -1,0 +1,80 @@
+.chunkPage {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+
+  .toolbar {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pageWrapper {
+    width: 100%;
+  }
+
+  .pageContent {
+    flex: 1;
+    width: 100%;
+    padding-right: 12px;
+    overflow-y: auto;
+
+    .spin {
+      min-height: 400px;
+    }
+  }
+
+  .chunkContainer {
+    display: flex;
+    height: calc(100vh - 332px);
+    width: 100%;
+  }
+
+  .pageFooter {
+    padding-top: 10px;
+    height: 32px;
+  }
+}
+
+.chunkCard {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &.selected {
+    border-color: #1890ff;
+    background-color: #e6f7ff;
+  }
+
+  .chunkHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    span {
+      margin-left: 12px;
+    }
+
+    .available {
+      color: #52c41a;
+    }
+
+    .unavailable {
+      color: #f5222d;
+    }
+  }
+
+  .chunkContent {
+    padding: 8px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

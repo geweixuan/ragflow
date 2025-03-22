@@ -21,6 +21,7 @@ export enum Routes {
   ParsedResult = `${Chunk}${Parsed}`,
   Result = '/result',
   ResultView = `${Chunk}${Result}`,
+  Train = '/train',
 }
 
 const routes = [
@@ -79,6 +80,43 @@ const routes = [
           {
             path: '/knowledge/knowledgeGraph',
             component: '@/pages/add-knowledge/components/knowledge-graph',
+          },
+        ],
+      },
+
+      {
+        path: '/train',
+        component: '@/pages/train',
+      },
+      {
+        path: '/train/details',
+        component: '@/pages/add-train',
+        routes: [
+          {
+            path: '/train/details/dataset',
+            component: '@/pages/add-train/components/train-dataset',
+            routes: [
+              {
+                path: '/train/details/dataset',
+                component: '@/pages/add-train/components/train-file',
+              },
+              {
+                path: '/train/details/dataset/chunk',
+                component: '@/pages/add-train/components/train-chunk',
+              },
+            ],
+          },
+          {
+            path: '/train/details/configuration',
+            component: '@/pages/add-train/components/train-setting',
+          },
+          {
+            path: '/train/details/testing',
+            component: '@/pages/add-train/components/train-testing',
+          },
+          {
+            path: '/train/details/knowledgeGraph',
+            component: '@/pages/add-train/components/train-graph',
           },
         ],
       },

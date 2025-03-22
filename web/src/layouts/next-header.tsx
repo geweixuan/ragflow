@@ -35,6 +35,7 @@ export function Header() {
       { path: Routes.Searches, name: t('search'), icon: Search },
       { path: Routes.Agents, name: t('flow'), icon: Cpu },
       { path: Routes.Files, name: t('fileManager'), icon: File },
+      { path: Routes.Train, name: t('train'), icon: Cpu },
     ],
     [t],
   );

@@ -81,6 +81,16 @@ export default {
       searchKnowledgePlaceholder: 'Search',
       noMoreData: `That's all. Nothing more.`,
     },
+    trainList: {
+      welcome: 'Welcome back',
+      description: 'Which training datasets will you use today?',
+      createTrainBase: 'Create training task',
+      name: 'Name',
+      namePlaceholder: 'Please input name!',
+      doc: 'Docs',
+      searchTrainPlaceholder: 'Search',
+      noMoreData: `That's all. Nothing more.`,
+    },
     knowledgeDetails: {
       dataset: 'Dataset',
       testing: 'Retrieval testing',
