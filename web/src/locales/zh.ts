@@ -68,8 +68,8 @@ export default {
       home: '首页',
       setting: '用户设置',
       logout: '登出',
-      fileManager: '文件管理',
-      flow: 'Agent',
+      fileManager: '文件库',
+      flow: '智能体',
       search: '搜索',
     },
     knowledgeList: {
