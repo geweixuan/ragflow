@@ -2,103 +2,240 @@
 
 .loginPage {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111827;
+  position: relative;
+  overflow: hidden;
+
+  // 背景图形
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 20% 20%,
+        rgba(90, 149, 237, 0.15) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 80% 30%,
+        rgba(94, 198, 255, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 50% 80%,
+        rgba(52, 211, 153, 0.12) 0%,
+        transparent 50%
+      );
+    z-index: 0;
+  }
+
+  // 网格线
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        rgba(94, 198, 255, 0.06) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(94, 198, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+  }
+
+  // 顶部主题图形和文字
+  .themeHeader {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    .themeItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 30px;
+
+      .themeIcon {
+        width: 100px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        position: relative;
+
+        svg {
+          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+          transition: all 0.3s ease;
+        }
+
+        &:hover svg {
+          transform: translateY(-5px);
+          filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4));
+        }
+      }
+
+      .themeText {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  // 连接线动画
+  .connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.15;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // 左侧信息面板
+  .sideInfoLeft {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 330px;
+    height: 500px;
+
+    .sideInfoContent {
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // 右侧信息面板
+  .sideInfoRight {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 330px;
+    height: 500px;
+
+    .sideInfoContent {
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 
   .loginLeft {
-    // width: 610px;
-    width: 40%;
-    background-color: rgba(255, 255, 255, 0.1);
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 25px 30px;
+    position: relative;
+    z-index: 2;
   }
 
   .leftContainer {
-    width: 60%;
-    padding: 5px, 0px, 5px, 0px;
+    width: 100%;
+    padding: 0;
     margin: 0 auto;
   }
 
   .loginRight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    position: relative;
-    &::before {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(24, 73, 169, 0.6);
-      background-image: url('@/assets/svg/login-background.svg');
-      background-size: cover;
-      background-blend-mode: multiply;
-      filter: blur(3px);
-      background-position: center;
-      z-index: -1;
-    }
-    .white {
-    }
-    .pink {
-      color: #e9d7fe;
-    }
-    .rightPanel {
-      max-width: 670px;
-      .loginTitle {
-        font-size: 68px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 90px;
-        letter-spacing: -1.44px;
-      }
-      .loginDescription {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 30px;
-      }
-      .loginRateNumber {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-      }
-      .loginRateReviews {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-      }
-    }
+    display: none; // 隐藏右侧面板
   }
 
   .loginTitle {
-    //styleName: Heading/1;
-    font-size: 38px;
+    font-size: 26px;
     font-weight: 600;
-    line-height: 46px;
+    line-height: 32px;
     letter-spacing: 0em;
-    height: 80px;
-    margin-bottom: 69px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1570ef;
 
-    // text-align: center;
     span {
-      font-size: 16px;
-      line-height: 24px;
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      color: #555;
+      margin-top: 4px;
     }
   }
 
-  @media screen and (max-width: 957px) {
+  @media screen and (max-width: 600px) {
     .loginLeft {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      padding: 30px 20px;
     }
 
-    .modal {
-      width: 80%;
+    .themeHeader {
+      flex-direction: column;
+      top: 30px;
+
+      .themeItem {
+        margin: 10px 0;
+
+        .themeIcon {
+          width: 80px;
+          height: 90px;
+
+          svg {
+            transform: scale(0.8);
+          }
+        }
+
+        .themeText {
+          font-size: 16px;
+        }
+      }
+    }
+
+    // 小屏幕时隐藏侧边信息
+    .sideInfoLeft,
+    .sideInfoRight {
+      display: none;
     }
   }
 }

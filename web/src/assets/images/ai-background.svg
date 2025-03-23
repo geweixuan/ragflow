@@ -1,0 +1,90 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <rect width="1920" height="1080" fill="url(#paint0_linear)"/>
+  
+  <!-- 网格效果 -->
+  <path d="M0 0H1920V1080H0V0Z" fill="url(#paint1_radial)" fill-opacity="0.6"/>
+  
+  <!-- 连接线效果 - 模拟神经网络 -->
+  <g opacity="0.3">
+    <path d="M300 300L600 500L900 300L1200 600L1500 400" stroke="#53B1FD" stroke-width="2"/>
+    <path d="M200 400L500 600L800 500L1100 700L1400 600" stroke="#53B1FD" stroke-width="2"/>
+    <path d="M250 700L550 500L850 700L1150 500L1450 800" stroke="#53B1FD" stroke-width="2"/>
+    <path d="M350 800L650 600L950 900L1250 700L1550 900" stroke="#53B1FD" stroke-width="2"/>
+    
+    <!-- 节点 -->
+    <circle cx="300" cy="300" r="8" fill="#1570EF"/>
+    <circle cx="600" cy="500" r="8" fill="#1570EF"/>
+    <circle cx="900" cy="300" r="8" fill="#1570EF"/>
+    <circle cx="1200" cy="600" r="8" fill="#1570EF"/>
+    <circle cx="1500" cy="400" r="8" fill="#1570EF"/>
+    
+    <circle cx="200" cy="400" r="8" fill="#1570EF"/>
+    <circle cx="500" cy="600" r="8" fill="#1570EF"/>
+    <circle cx="800" cy="500" r="8" fill="#1570EF"/>
+    <circle cx="1100" cy="700" r="8" fill="#1570EF"/>
+    <circle cx="1400" cy="600" r="8" fill="#1570EF"/>
+    
+    <circle cx="250" cy="700" r="8" fill="#1570EF"/>
+    <circle cx="550" cy="500" r="8" fill="#1570EF"/>
+    <circle cx="850" cy="700" r="8" fill="#1570EF"/>
+    <circle cx="1150" cy="500" r="8" fill="#1570EF"/>
+    <circle cx="1450" cy="800" r="8" fill="#1570EF"/>
+    
+    <circle cx="350" cy="800" r="8" fill="#1570EF"/>
+    <circle cx="650" cy="600" r="8" fill="#1570EF"/>
+    <circle cx="950" cy="900" r="8" fill="#1570EF"/>
+    <circle cx="1250" cy="700" r="8" fill="#1570EF"/>
+    <circle cx="1550" cy="900" r="8" fill="#1570EF"/>
+  </g>
+  
+  <!-- 图表和数据元素 - 模型训练 -->
+  <g opacity="0.7" transform="translate(300, 200)">
+    <rect x="0" y="0" width="300" height="200" rx="10" fill="#1570EF" fill-opacity="0.1" stroke="#1570EF" stroke-width="2"/>
+    <text x="20" y="30" font-family="Arial" font-size="18" fill="#B2DDFF">模型训练</text>
+    <path d="M30 80L80 120L130 90L180 130L230 70L280 110" stroke="#1570EF" stroke-width="3" fill="none"/>
+    <circle cx="80" cy="120" r="5" fill="#53B1FD"/>
+    <circle cx="130" cy="90" r="5" fill="#53B1FD"/>
+    <circle cx="180" cy="130" r="5" fill="#53B1FD"/>
+    <circle cx="230" cy="70" r="5" fill="#53B1FD"/>
+  </g>
+  
+  <!-- 知识节点 - 知识增强 -->
+  <g opacity="0.7" transform="translate(800, 400)">
+    <rect x="0" y="0" width="300" height="200" rx="10" fill="#1570EF" fill-opacity="0.1" stroke="#1570EF" stroke-width="2"/>
+    <text x="20" y="30" font-family="Arial" font-size="18" fill="#B2DDFF">知识增强</text>
+    
+    <!-- 知识图谱表示 -->
+    <circle cx="80" cy="80" r="25" fill="none" stroke="#B2DDFF" stroke-width="2"/>
+    <circle cx="150" cy="120" r="20" fill="none" stroke="#B2DDFF" stroke-width="2"/>
+    <circle cx="220" cy="90" r="30" fill="none" stroke="#B2DDFF" stroke-width="2"/>
+    <path d="M105 80L130 110" stroke="#53B1FD" stroke-width="2"/>
+    <path d="M170 120L190 100" stroke="#53B1FD" stroke-width="2"/>
+    <path d="M90 105L140 140" stroke="#53B1FD" stroke-width="2"/>
+  </g>
+  
+  <!-- 应用界面 - AI应用 -->
+  <g opacity="0.7" transform="translate(1300, 200)">
+    <rect x="0" y="0" width="300" height="200" rx="10" fill="#1570EF" fill-opacity="0.1" stroke="#1570EF" stroke-width="2"/>
+    <text x="20" y="30" font-family="Arial" font-size="18" fill="#B2DDFF">AI应用</text>
+    
+    <!-- 模拟界面 -->
+    <rect x="40" y="60" width="220" height="120" rx="5" fill="none" stroke="#B2DDFF" stroke-width="2"/>
+    <rect x="50" y="70" width="200" height="30" rx="3" fill="#53B1FD" fill-opacity="0.3"/>
+    <rect x="60" y="110" width="80" height="10" rx="2" fill="#B2DDFF" fill-opacity="0.5"/>
+    <rect x="60" y="130" width="180" height="10" rx="2" fill="#B2DDFF" fill-opacity="0.5"/>
+    <rect x="60" y="150" width="120" height="10" rx="2" fill="#B2DDFF" fill-opacity="0.5"/>
+  </g>
+  
+  <!-- 定义渐变 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A1128"/>
+      <stop offset="1" stop-color="#1C3879"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 540) scale(1000)">
+      <stop offset="0" stop-color="#B2DDFF" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#B2DDFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 
