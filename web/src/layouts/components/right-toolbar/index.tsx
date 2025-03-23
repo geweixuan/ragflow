@@ -1,5 +1,5 @@
 import { useTranslate } from '@/hooks/common-hooks';
-import { MenuProps, Space } from 'antd';
+import { Dropdown, MenuProps, Space } from 'antd';
 import React from 'react';
 import User from '../user';
 
@@ -7,6 +7,8 @@ import { useTheme } from '@/components/theme-provider';
 import { LanguageList, LanguageMap } from '@/constants/common';
 import { useChangeLanguage } from '@/hooks/logic-hooks';
 import { useFetchUserInfo } from '@/hooks/user-setting-hooks';
+import { DownOutlined } from '@ant-design/icons';
+import { camelCase } from 'lodash';
 import { MoonIcon, SunIcon } from 'lucide-react';
 import styled from './index.less';
 
@@ -56,20 +58,12 @@ const RightToolBar = () => {
   return (
     <div className={styled.toolbarWrapper}>
       <Space wrap size={16}>
-        {/* 以下三个按钮已隐藏
         <Dropdown menu={{ items, onClick: handleItemClick }} placement="bottom">
           <Space className={styled.language}>
             <b>{t(camelCase(language))}</b>
             <DownOutlined />
           </Space>
         </Dropdown>
-        <Circle>
-          <GithubOutlined onClick={handleGithubCLick} />
-        </Circle>
-        <Circle>
-          <CircleHelp className="size-4" onClick={handleDocHelpCLick} />
-        </Circle>
-        */}
         <Circle>
           {theme === 'dark' ? (
             <MoonIcon onClick={onMoonClick} size={20} />

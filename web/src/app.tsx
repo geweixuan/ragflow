@@ -28,8 +28,8 @@ dayjs.extend(weekOfYear);
 dayjs.extend(weekYear);
 
 const AntLanguageMap = {
-  en: enUS,
   zh: zhCN,
+  en: enUS,
   'zh-TRADITIONAL': zh_HK,
   vi: vi_VN,
   'pt-BR': pt_BR,
@@ -43,7 +43,7 @@ type Locale = ConfigProviderProps['locale'];
 function Root({ children }: React.PropsWithChildren) {
   const { theme: themeragflow } = useTheme();
   const getLocale = (lng: string) =>
-    AntLanguageMap[lng as keyof typeof AntLanguageMap] ?? enUS;
+    AntLanguageMap[lng as keyof typeof AntLanguageMap] ?? zhCN;
 
   const [locale, setLocal] = useState<Locale>(getLocale(storage.getLanguage()));
 
