@@ -9,7 +9,7 @@ ENV LIGHTEN=${LIGHTEN}
 
 WORKDIR /ragflow
 
-# Copy models downloaded via download_deps.py
+# Copy models downloaded via download_deps.py 我先注释掉了
 RUN mkdir -p /ragflow/rag/res/deepdoc /root/.ragflow
 RUN --mount=type=bind,from=infiniflow/ragflow_deps:latest,source=/huggingface.co,target=/huggingface.co \
     cp /huggingface.co/InfiniFlow/huqie/huqie.txt.trie /ragflow/rag/res/ && \
@@ -199,6 +199,10 @@ COPY agent agent
 COPY graphrag graphrag
 COPY agentic_reasoning agentic_reasoning
 COPY pyproject.toml uv.lock ./
+
+# Copy llama-factory and install it
+COPY llama-factory llama-factory
+RUN cd llama-factory && pip install -e ".[torch,metrics]"
 
 COPY docker/service_conf.yaml.template ./conf/service_conf.yaml.template
 COPY docker/entrypoint.sh docker/entrypoint-parser.sh ./
