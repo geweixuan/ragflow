@@ -36,8 +36,16 @@ repos = [
 
 def download_model(repo_id):
     local_dir = os.path.abspath(os.path.join("huggingface.co", repo_id))
+    
+    # 检查本地目录是否存在且不为空
+    if os.path.exists(local_dir) and os.listdir(local_dir):
+        print(f"模型 {repo_id} 已存在于本地 {local_dir}，跳过下载")
+        return
+        
+    print(f"开始下载模型 {repo_id}")
     os.makedirs(local_dir, exist_ok=True)
     snapshot_download(repo_id=repo_id, local_dir=local_dir, local_dir_use_symlinks=False)
+    print(f"模型 {repo_id} 下载完成")
 
 
 if __name__ == "__main__":
