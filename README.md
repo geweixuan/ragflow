@@ -1,3 +1,5 @@
+docker build --build-arg NEED_MIRROR=1 -t ragflow-with-train:v0.2 .
+
 <div align="center">
 <a href="https://demo.ragflow.io/">
 <img src="web/src/assets/logo-with-text.png" width="520" alt="ragflow logo">
