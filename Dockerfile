@@ -202,8 +202,9 @@ COPY pyproject.toml uv.lock ./
 
 # Copy llama-factory and install it
 COPY llama-factory llama-factory
-RUN cd llama-factory && pip install -e ".[torch,metrics]"
-
+RUN cd llama-factory && \
+    uv pip install -e ".[torch,metrics]"
+	
 COPY docker/service_conf.yaml.template ./conf/service_conf.yaml.template
 COPY docker/entrypoint.sh docker/entrypoint-parser.sh ./
 RUN chmod +x ./entrypoint*.sh
