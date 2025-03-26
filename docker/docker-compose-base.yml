@@ -126,6 +126,23 @@ services:
     networks:
       - ragflow
     restart: on-failure
+  ollama:
+    image: ollama/ollama
+    networks:
+      - ragflow
+    restart: on-failure
+    volumes:
+      - /home/ai/ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    container_name: ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
 
 
 
